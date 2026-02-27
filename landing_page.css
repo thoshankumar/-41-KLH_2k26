@@ -1,0 +1,446 @@
+/* Landing Page Styles */
+
+/* Animated Floating Lines Background */
+.floating-lines-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+    z-index: -1;
+    overflow: hidden;
+}
+
+.floating-line {
+    position: absolute;
+    width: 200%;
+    height: 3px;
+    background: linear-gradient(90deg, 
+        transparent, 
+        rgba(138, 93, 255, 0.8), 
+        rgba(102, 126, 234, 0.8),
+        rgba(138, 93, 255, 0.8), 
+        transparent);
+    filter: blur(2px);
+    box-shadow: 0 0 20px rgba(138, 93, 255, 0.6),
+                0 0 40px rgba(102, 126, 234, 0.4);
+}
+
+.line-1 {
+    top: 20%;
+    left: -100%;
+    animation: floatLine1 15s linear infinite;
+    animation-delay: 0s;
+}
+
+.line-2 {
+    top: 35%;
+    left: -100%;
+    height: 2px;
+    animation: floatLine2 18s linear infinite;
+    animation-delay: 2s;
+    background: linear-gradient(90deg, 
+        transparent, 
+        rgba(102, 126, 234, 0.7), 
+        rgba(245, 87, 108, 0.7),
+        rgba(102, 126, 234, 0.7), 
+        transparent);
+}
+
+.line-3 {
+    top: 50%;
+    left: -100%;
+    height: 4px;
+    animation: floatLine3 20s linear infinite;
+    animation-delay: 4s;
+}
+
+.line-4 {
+    top: 65%;
+    left: -100%;
+    height: 2px;
+    animation: floatLine1 16s linear infinite;
+    animation-delay: 6s;
+    background: linear-gradient(90deg, 
+        transparent, 
+        rgba(240, 147, 251, 0.7), 
+        rgba(138, 93, 255, 0.7),
+        rgba(240, 147, 251, 0.7), 
+        transparent);
+}
+
+.line-5 {
+    top: 80%;
+    left: -100%;
+    height: 3px;
+    animation: floatLine2 17s linear infinite;
+    animation-delay: 8s;
+}
+
+/* Curved top lines */
+.line-6 {
+    top: 15%;
+    left: -100%;
+    height: 2px;
+    animation: floatLineCurve1 19s linear infinite;
+    animation-delay: 1s;
+    opacity: 0.7;
+}
+
+.line-7 {
+    top: 45%;
+    left: -100%;
+    height: 3px;
+    animation: floatLineCurve2 21s linear infinite;
+    animation-delay: 3s;
+    opacity: 0.6;
+}
+
+@keyframes floatLine1 {
+    0% {
+        left: -100%;
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-30px) rotate(2deg);
+    }
+    100% {
+        left: 100%;
+        transform: translateY(0) rotate(0deg);
+    }
+}
+
+@keyframes floatLine2 {
+    0% {
+        left: -100%;
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(30px) rotate(-2deg);
+    }
+    100% {
+        left: 100%;
+        transform: translateY(0) rotate(0deg);
+    }
+}
+
+@keyframes floatLine3 {
+    0% {
+        left: -100%;
+        transform: translateY(0) scaleX(1);
+    }
+    25% {
+        transform: translateY(-20px) scaleX(1.1);
+    }
+    75% {
+        transform: translateY(20px) scaleX(0.9);
+    }
+    100% {
+        left: 100%;
+        transform: translateY(0) scaleX(1);
+    }
+}
+
+@keyframes floatLineCurve1 {
+    0% {
+        left: -100%;
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-40px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    75% {
+        transform: translateY(-35px);
+    }
+    100% {
+        left: 100%;
+        transform: translateY(0);
+    }
+}
+
+@keyframes floatLineCurve2 {
+    0% {
+        left: -100%;
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(40px);
+    }
+    50% {
+        transform: translateY(20px);
+    }
+    75% {
+        transform: translateY(35px);
+    }
+    100% {
+        left: 100%;
+        transform: translateY(0);
+    }
+}
+
+.landing-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    position: relative;
+    z-index: 100;
+}
+
+.hero-section {
+    text-align: center;
+    padding: 3rem 0;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.9) 0%, rgba(118, 75, 162, 0.9) 100%);
+    border-radius: 20px;
+    color: white;
+    margin-bottom: 3rem;
+    animation: fadeIn 1s;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(102, 126, 234, 0.3);
+    position: relative;
+    z-index: 101;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    animation: fadeInDown 1.2s;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+    opacity: 0.95;
+    animation: fadeInUp 1.2s;
+}
+
+.login-btn-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    animation: slideInRight 0.8s;
+}
+
+/* Ensure all landing page content is above background */
+.feature-card, .stat-card, .benefit-item, .step-card {
+    position: relative;
+    z-index: 100;
+}
+
+/* Top login button styling */
+button[key="top_login_btn"] {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    color: white !important;
+    font-size: 1.1rem !important;
+    font-weight: 600 !important;
+    padding: 0.8rem 2rem !important;
+    border-radius: 50px !important;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4) !important;
+}
+
+button[key="top_login_btn"]:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6) !important;
+}
+
+/* CTA button styling */
+button[key="cta_btn"] {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    color: white !important;
+    font-size: 1.3rem !important;
+    font-weight: 700 !important;
+    padding: 1rem 3rem !important;
+    border-radius: 50px !important;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4) !important;
+}
+
+button[key="cta_btn"]:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6) !important;
+}
+
+/* Back button */
+button[key="back_to_landing"] {
+    background: #f0f2f6 !important;
+    color: #2a5298 !important;
+    border: 2px solid #2a5298 !important;
+    font-weight: 600 !important;
+    border-radius: 8px !important;
+    margin-bottom: 1rem !important;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.feature-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    animation: fadeInUp 1s;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 12px 40px rgba(138, 93, 255, 0.4);
+    border: 1px solid rgba(138, 93, 255, 0.4);
+}
+
+.feature-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.feature-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.feature-description {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.6;
+}
+
+.stats-section {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 3rem;
+    border-radius: 20px;
+    margin: 3rem 0;
+    text-align: center;
+    animation: fadeIn 1.5s;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.stat-card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(5px);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px);
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #8a5dff;
+    text-shadow: 0 2px 8px rgba(138, 93, 255, 0.5);
+}
+
+.stat-label {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-top: 0.5rem;
+}
+
+.cta-section {
+    text-align: center;
+    padding: 4rem 0;
+    animation: fadeIn 2s;
+}
+
+.cta-button {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 1.2rem 3rem;
+    border-radius: 50px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+}
